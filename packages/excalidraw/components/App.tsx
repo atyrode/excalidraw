@@ -6099,7 +6099,7 @@ class App extends React.Component<AppProps, AppState> {
     if (
       this.hitLinkElement &&
       !this.state.selectedElementIds[this.hitLinkElement.id] &&
-      this.hitLinkElement.customData?.showHyperlinkIcon !== false
+      this.hitLinkElement.customData?.showHyperlinkIcon !== false //atyrode
     ) {
       setCursor(this.interactiveCanvas, CURSOR_TYPE.POINTER);
       showHyperlinkTooltip(
