@@ -1,5 +1,5 @@
 {
-  "name": "@excalidraw/excalidraw",
+  "name": "@atyrode/excalidraw",
   "version": "0.18.0",
   "type": "module",
   "types": "./dist/types/excalidraw/index.d.ts",
@@ -125,9 +125,9 @@
     "jest-diff": "29.7.0",
     "typescript": "4.9.4"
   },
-  "repository": "https://github.com/excalidraw/excalidraw",
-  "bugs": "https://github.com/excalidraw/excalidraw/issues",
-  "homepage": "https://github.com/excalidraw/excalidraw/tree/master/packages/excalidraw",
+  "repository": "https://github.com/atyrode/excalidraw",
+  "bugs": "https://github.com/atyrode/excalidraw/issues",
+  "homepage": "https://github.com/atyrode/excalidraw/tree/master/packages/excalidraw",
   "scripts": {
     "gen:types": "rm -rf types && tsc",
     "build:esm": "rm -rf dist && node ../../scripts/buildPackage.js && yarn gen:types"
