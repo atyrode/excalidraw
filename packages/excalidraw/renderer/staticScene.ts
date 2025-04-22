@@ -188,12 +188,13 @@ const renderLinkIcon = (
         window.devicePixelRatio * appState.zoom.value,
         window.devicePixelRatio * appState.zoom.value,
       );
-      linkCanvasCacheContext.fillStyle = "#fff";
-      linkCanvasCacheContext.fillRect(0, 0, width, height);
+      /*linkCanvasCacheContext.fillStyle = "#fff";
+      linkCanvasCacheContext.fillRect(0, 0, width, height);*/ //atyrode
 
       if (canvasKey === "elementLink") {
         linkCanvasCacheContext.drawImage(ELEMENT_LINK_IMG, 0, 0, width, height);
       } else {
+        linkCanvasCacheContext.globalAlpha = appState.linkOpacity; //atyrode
         linkCanvasCacheContext.drawImage(
           EXTERNAL_LINK_IMG,
           0,

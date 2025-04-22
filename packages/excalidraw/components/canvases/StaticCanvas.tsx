@@ -113,6 +113,7 @@ const getRelevantAppStateProps = (appState: AppState): StaticCanvasAppState => {
     editingGroupId: appState.editingGroupId,
     currentHoveredFontFamily: appState.currentHoveredFontFamily,
     croppingElementId: appState.croppingElementId,
+    linkOpacity: appState.linkOpacity, //atyrode
   };
 
   return relevantAppStateProps;

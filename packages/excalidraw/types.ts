@@ -199,6 +199,7 @@ export type StaticCanvasAppState = Readonly<
     gridSize: AppState["gridSize"];
     gridStep: AppState["gridStep"];
     frameRendering: AppState["frameRendering"];
+    linkOpacity: AppState["linkOpacity"]; //atyrode
     currentHoveredFontFamily: AppState["currentHoveredFontFamily"];
     hoveredElementIds: AppState["hoveredElementIds"];
     // Cropping
@@ -428,6 +429,8 @@ export interface AppState {
   croppingElementId: ExcalidrawElement["id"] | null;
 
   searchMatches: readonly SearchMatch[];
+
+  linkOpacity: number; //atyrode
 }
 
 type SearchMatch = {
