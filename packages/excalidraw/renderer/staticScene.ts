@@ -351,8 +351,8 @@ const _renderStaticScene = ({
         }
 
         context.restore();
-
-        if (!isExporting) {
+        
+        if (!isExporting && element.customData?.showHyperlinkIcon !== false) { //atyrode
           renderLinkIcon(element, context, appState, elementsMap);
         }
       } catch (error: any) {
@@ -403,7 +403,7 @@ const _renderStaticScene = ({
               appState,
             );
           }
-          if (!isExporting) {
+          if (!isExporting && element.customData?.showHyperlinkIcon !== false) { //atyrode
             renderLinkIcon(element, context, appState, elementsMap);
           }
         };
