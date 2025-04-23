@@ -1290,7 +1290,7 @@ class App extends React.Component<AppProps, AppState> {
                     : POINTER_EVENTS.disabled,
                 }}
               >
-                {isHovered && (
+                {el.customData?.showClickableHint !== false && isHovered && ( //atyrode
                   <div className="excalidraw__embeddable-hint">
                     {t("buttons.embeddableInteractionButton")}
                   </div>
@@ -6179,7 +6179,8 @@ class App extends React.Component<AppProps, AppState> {
               event,
               scenePointerX,
               scenePointerY,
-            )
+            ) &&
+            hitElement.customData?.showClickableHint !== false //atyrode
           ) {
             setCursor(this.interactiveCanvas, CURSOR_TYPE.POINTER);
             this.setState({
