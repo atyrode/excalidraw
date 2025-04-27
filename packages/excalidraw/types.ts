@@ -200,6 +200,7 @@ export type StaticCanvasAppState = Readonly<
     gridStep: AppState["gridStep"];
     frameRendering: AppState["frameRendering"];
     linkOpacity: AppState["linkOpacity"]; //atyrode
+    pad: AppState["pad"]; //atyrode
     currentHoveredFontFamily: AppState["currentHoveredFontFamily"];
     hoveredElementIds: AppState["hoveredElementIds"];
     // Cropping
@@ -431,6 +432,15 @@ export interface AppState {
   searchMatches: readonly SearchMatch[];
 
   linkOpacity: number; //atyrode
+
+  pad: { //atyrode
+    moduleBorderOffset: {
+      left: number;
+      right: number;
+      top: number;
+      bottom: number;
+    };
+  };
 }
 
 type SearchMatch = {

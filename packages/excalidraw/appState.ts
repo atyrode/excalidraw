@@ -123,6 +123,14 @@ export const getDefaultAppState = (): Omit<
     croppingElementId: null,
     searchMatches: [],
     linkOpacity: 1, //atyrode
+    pad: { //atyrode
+      moduleBorderOffset: {
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+      },
+    },
   };
 };
 
@@ -248,6 +256,7 @@ const APP_STATE_STORAGE_CONF = (<
   croppingElementId: { browser: false, export: false, server: false },
   searchMatches: { browser: false, export: false, server: false },
   linkOpacity: { browser: false, export: false, server: false }, //atyrode
+  pad: { browser: false, export: false, server: false }, //atyrode
 });
 
 const _clearAppStateForStorage = <

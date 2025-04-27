@@ -1234,6 +1234,8 @@ class App extends React.Component<AppProps, AppState> {
           const isHovered =
             this.state.activeEmbeddable?.element === el &&
             this.state.activeEmbeddable?.state === "hover";
+          
+          const borderOffsets = this.state.pad?.moduleBorderOffset;
 
           return (
             <div
@@ -1282,9 +1284,25 @@ class App extends React.Component<AppProps, AppState> {
                 }}*/
                 className="excalidraw__embeddable-container__inner"
                 style={{
-                  width: isVisible ? `${el.width}px` : 0,
-                  height: isVisible ? `${el.height}px` : 0,
+                  width: isVisible
+                    ? `${
+                        el.width -
+                        ((borderOffsets?.left || 0) +    //atyrode
+                          (borderOffsets?.right || 0))   //atyrode
+                      }px`
+                    : 0,
+                  height: isVisible
+                    ? `${
+                        el.height -
+                        ((borderOffsets?.top || 0) +     //atyrode
+                          (borderOffsets?.bottom || 0))  //atyrode
+                      }px`
+                    : 0,
                   transform: isVisible ? `rotate(${el.angle}rad)` : "none",
+                  borderTop: borderOffsets?.top ? `${borderOffsets?.top}px solid #00000000` : undefined, //atyrode
+                  borderBottom: borderOffsets?.bottom ? `${borderOffsets?.bottom}px solid #00000000` : undefined, //atyrode
+                  borderLeft: borderOffsets?.left ? `${borderOffsets?.left}px solid #00000000` : undefined, //atyrode
+                  borderRight: borderOffsets?.right ? `${borderOffsets?.right}px solid #00000000` : undefined, //atyrode
                   pointerEvents: isActive
                     ? POINTER_EVENTS.enabled
                     : POINTER_EVENTS.disabled,

@@ -114,6 +114,7 @@ const getRelevantAppStateProps = (appState: AppState): StaticCanvasAppState => {
     currentHoveredFontFamily: appState.currentHoveredFontFamily,
     croppingElementId: appState.croppingElementId,
     linkOpacity: appState.linkOpacity, //atyrode
+    pad: appState.pad, //atyrode
   };
 
   return relevantAppStateProps;
