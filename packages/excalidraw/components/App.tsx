@@ -6757,8 +6757,7 @@ class App extends React.Component<AppProps, AppState> {
       ) {
         this.handleEmbeddableCenterClick(this.hitLinkElement);
       } else {
-        console.log("atyrode: this.redirectToLink(event, this.device.isTouchScreen);");
-        if (this.hitLinkElement.customData?.showHyperlinkIcon !== false) {
+        if (this.hitLinkElement.customData?.showHyperlinkIcon !== false) { //atyrode
           this.redirectToLink(event, this.device.isTouchScreen);
         }
       }
