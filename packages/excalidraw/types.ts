@@ -440,6 +440,7 @@ export interface AppState {
       top: number;
       bottom: number;
     };
+    userSettings: Record<string, any>;
   };
 }
 

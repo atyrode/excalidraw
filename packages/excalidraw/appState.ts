@@ -130,6 +130,7 @@ export const getDefaultAppState = (): Omit<
         top: 0,
         bottom: 0,
       },
+      userSettings: {},
     },
   };
 };
