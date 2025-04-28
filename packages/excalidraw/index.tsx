@@ -309,3 +309,5 @@ export { setCustomTextMetricsProvider } from "@excalidraw/element/textMeasuremen
 
 export { Dialog, DialogProps, DialogSize } from "./components/Dialog"; //atyrode
 export { Range, RangeProps } from "./components/Range"; //atyrode
+import Stack from "./components/Stack"; //atyrode
+export { Stack }; //atyrode
