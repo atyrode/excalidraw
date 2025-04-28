@@ -306,4 +306,6 @@ export { getDataURL } from "./data/blob";
 export { isElementLink } from "@excalidraw/element/elementLink";
 
 export { setCustomTextMetricsProvider } from "@excalidraw/element/textMeasurements";
+
 export { Dialog, DialogProps, DialogSize } from "./components/Dialog"; //atyrode
+export { Range, RangeProps } from "./components/Range"; //atyrode
