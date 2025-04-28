@@ -312,3 +312,4 @@ export { Range, RangeProps } from "./components/Range"; //atyrode
 import Stack from "./components/Stack"; //atyrode
 export { Stack }; //atyrode
 export { Section } from "./components/Section"; //atyrode
+export { Tooltip, getTooltipDiv, updateTooltipPosition } from "./components/Tooltip"; //atyrode
