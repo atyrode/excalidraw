@@ -131,6 +131,10 @@ export const getDefaultAppState = (): Omit<
         bottom: 0,
       },
       userSettings: {},
+      uniqueId: null,
+      displayName: null,
+      pads: [],
+      parentUniqueId: null,
     },
   };
 };
