@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { DEFAULT_UI_OPTIONS, isShallowEqual } from "@excalidraw/common";
+import { APP_NAME, DEFAULT_UI_OPTIONS, isShallowEqual } from "@excalidraw/common";
 
 import App from "./components/App";
 import { InitializeApp } from "./components/InitializeApp";
@@ -309,10 +309,27 @@ export { isElementLink } from "@excalidraw/element/elementLink";
 
 export { setCustomTextMetricsProvider } from "@excalidraw/element/textMeasurements";
 
-export { Dialog, DialogProps, DialogSize } from "./components/Dialog"; //atyrode
-export { Range, RangeProps } from "./components/Range"; //atyrode
-import Stack from "./components/Stack"; //atyrode
-export { Stack }; //atyrode
-export { Section } from "./components/Section"; //atyrode
-export { Tooltip, getTooltipDiv, updateTooltipPosition } from "./components/Tooltip"; //atyrode
-export { ContextMenu, ContextMenuProps, ContextMenuItem, ContextMenuItems, CONTEXT_MENU_SEPARATOR } from "./components/ContextMenu"; //atyrode
+/* atyrode */
+export { Dialog, DialogProps, DialogSize } from "./components/Dialog";
+export { Range, RangeProps } from "./components/Range";
+import Stack from "./components/Stack";
+export { Stack };
+export { Section } from "./components/Section";
+export { Tooltip, getTooltipDiv, updateTooltipPosition } from "./components/Tooltip";
+export { ContextMenu, ContextMenuProps, ContextMenuItem, ContextMenuItems, CONTEXT_MENU_SEPARATOR } from "./components/ContextMenu";
+export { ErrorDialog } from "./components/ErrorDialog";
+export { APP_NAME, EVENT, CANVAS_SEARCH_TAB, DEFAULT_SIDEBAR } from "@excalidraw/common/constants";
+export { isDevEnv, isTestEnv, preventUnload, resolvablePromise, throttleRAF, assertNever, bytesToHexString } from "@excalidraw/common/utils";
+export { decryptData, encryptData, generateEncryptionKey} from "./data/encryption";
+export { IDLE_THRESHOLD, ACTIVE_THRESHOLD } from "@excalidraw/common/constants";
+export { isImageElement } from "@excalidraw/element/typeChecks";
+export { AbortError } from "@excalidraw/excalidraw/errors";
+export { t } from "@excalidraw/excalidraw/i18n";
+export { withBatchedUpdates } from "@excalidraw/excalidraw/reactUtils";
+export { trackEvent } from "@excalidraw/excalidraw/analytics";
+export { compressData } from "./data/encode";
+export { isInitializedImageElement } from "@excalidraw/element/typeChecks";
+export { clearAppStateForLocalStorage, getDefaultAppState } from "@excalidraw/excalidraw/appState";
+export { debounce } from "@excalidraw/common/utils";
+export { clearElementsForLocalStorage } from "@excalidraw/element/index";
+/* atyrode */
