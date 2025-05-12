@@ -121,7 +121,6 @@ export const getDefaultAppState = (): Omit<
     followedBy: new Set(),
     isCropping: false,
     croppingElementId: null,
-    searchMatches: [],
     linkOpacity: 1, //atyrode
     pad: { //atyrode
       moduleBorderOffset: {
@@ -136,6 +135,7 @@ export const getDefaultAppState = (): Omit<
       pads: [],
       parentUniqueId: null,
     },
+    searchMatches: null,
   };
 };
 
