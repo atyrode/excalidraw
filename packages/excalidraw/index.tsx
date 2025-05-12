@@ -328,4 +328,5 @@ export { isInitializedImageElement } from "@excalidraw/element/typeChecks";
 export { clearAppStateForLocalStorage, getDefaultAppState } from "@excalidraw/excalidraw/appState";
 export { debounce } from "@excalidraw/common/utils";
 export { clearElementsForLocalStorage } from "@excalidraw/element/index";
+export { RadioGroup, RadioGroupChoice, RadioGroupProps } from "@excalidraw/excalidraw/components/RadioGroup";
 /* atyrode */
