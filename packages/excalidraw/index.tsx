@@ -306,27 +306,34 @@ export { isElementLink } from "@excalidraw/element";
 export { setCustomTextMetricsProvider } from "@excalidraw/element";
 
 /* atyrode */
+
+// Components
 export { Dialog, DialogProps, DialogSize } from "./components/Dialog";
 export { Range, RangeProps } from "./components/Range";
 import Stack from "./components/Stack";
 export { Stack };
 export { Section } from "./components/Section";
-export { Tooltip, getTooltipDiv, updateTooltipPosition } from "./components/Tooltip";
 export { ContextMenu, ContextMenuProps, ContextMenuItem, ContextMenuItems, CONTEXT_MENU_SEPARATOR } from "./components/ContextMenu";
+export { Tooltip, getTooltipDiv, updateTooltipPosition } from "./components/Tooltip";
+export { RadioGroup, RadioGroupChoice, RadioGroupProps } from "./components/RadioGroup";
 export { ErrorDialog } from "./components/ErrorDialog";
-export { APP_NAME, EVENT, CANVAS_SEARCH_TAB, DEFAULT_SIDEBAR } from "@excalidraw/common/constants";
-export { isDevEnv, isTestEnv, preventUnload, resolvablePromise, throttleRAF, assertNever, bytesToHexString } from "@excalidraw/common/utils";
-export { decryptData, encryptData, generateEncryptionKey} from "./data/encryption";
-export { IDLE_THRESHOLD, ACTIVE_THRESHOLD } from "@excalidraw/common/constants";
-export { isImageElement } from "@excalidraw/element/typeChecks";
-export { AbortError } from "@excalidraw/excalidraw/errors";
-export { t } from "@excalidraw/excalidraw/i18n";
-export { withBatchedUpdates } from "@excalidraw/excalidraw/reactUtils";
-export { trackEvent } from "@excalidraw/excalidraw/analytics";
+export { Island } from "./components/Island";
+
+// Utils
+export { AbortError } from "./errors";
+export { t } from "./i18n";
+export { withBatchedUpdates } from "./reactUtils";
+export { trackEvent } from "./analytics";
 export { compressData } from "./data/encode";
+export { decryptData, encryptData, generateEncryptionKey} from "./data/encryption";
+export { clearAppStateForLocalStorage, getDefaultAppState } from "./appState";
+export { isDevEnv, isTestEnv, preventUnload, resolvablePromise, throttleRAF, assertNever, bytesToHexString } from "@excalidraw/common/utils";
+export { isImageElement } from "@excalidraw/element/typeChecks";
 export { isInitializedImageElement } from "@excalidraw/element/typeChecks";
-export { clearAppStateForLocalStorage, getDefaultAppState } from "@excalidraw/excalidraw/appState";
 export { debounce } from "@excalidraw/common/utils";
 export { clearElementsForLocalStorage } from "@excalidraw/element/index";
-export { RadioGroup, RadioGroupChoice, RadioGroupProps } from "@excalidraw/excalidraw/components/RadioGroup";
+
+// Constants
+export { APP_NAME, EVENT, CANVAS_SEARCH_TAB, DEFAULT_SIDEBAR, IDLE_THRESHOLD, ACTIVE_THRESHOLD } from "@excalidraw/common/constants";
+
 /* atyrode */
