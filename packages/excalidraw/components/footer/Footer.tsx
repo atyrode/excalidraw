@@ -14,18 +14,20 @@ import { Section } from "../Section";
 import Stack from "../Stack";
 
 import type { ActionManager } from "../../actions/manager";
-import type { UIAppState } from "../../types";
+import type { UIAppState, UIOptions } from "../../types"; // atyrode
 
 const Footer = ({
   appState,
   actionManager,
   showExitZenModeBtn,
   renderWelcomeScreen,
+  UIOptions, // atyrode
 }: {
   appState: UIAppState;
   actionManager: ActionManager;
   showExitZenModeBtn: boolean;
   renderWelcomeScreen: boolean;
+  UIOptions: UIOptions; // atyrode
 }) => {
   const { FooterCenterTunnel, WelcomeScreenHelpHintTunnel } = useTunnels();
 
@@ -46,20 +48,26 @@ const Footer = ({
       >
         <Stack.Col gap={2}>
           <Section heading="canvasActions">
-            <ZoomActions
-              renderAction={actionManager.renderAction}
-              zoom={appState.zoom}
-            />
-
-            {!appState.viewModeEnabled && (
-              <UndoRedoActions
+            {/* atyrode */}
+            {UIOptions.hiddenElements?.zoomControls !== true && (
+              <ZoomActions
                 renderAction={actionManager.renderAction}
-                className={clsx("zen-mode-transition", {
+                zoom={appState.zoom}
+              />
+            )}
+
+            {!appState.viewModeEnabled &&
+              UIOptions.hiddenElements?.undoRedo !== true && (
+                <UndoRedoActions
+                  renderAction={actionManager.renderAction}
+                  className={clsx("zen-mode-transition", {
                   "layer-ui__wrapper__footer-left--transition-bottom":
                     appState.zenModeEnabled,
                 })}
               />
             )}
+            {/* atyrode */}
+
             {showFinalize && (
               <FinalizeAction
                 renderAction={actionManager.renderAction}
@@ -80,9 +88,13 @@ const Footer = ({
       >
         <div style={{ position: "relative" }}>
           {renderWelcomeScreen && <WelcomeScreenHelpHintTunnel.Out />}
-          <HelpButton
-            onClick={() => actionManager.executeAction(actionShortcuts)}
-          />
+          {/* atyrode */}
+          {UIOptions.hiddenElements?.helpButton !== true && (
+            <HelpButton
+              onClick={() => actionManager.executeAction(actionShortcuts)}
+            />
+          )}
+          {/* atyrode */}
         </div>
       </div>
       <ExitZenModeAction

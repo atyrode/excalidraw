@@ -666,6 +666,13 @@ export type UIOptions = Partial<{
   tools: {
     image: boolean;
   };
+  hiddenElements: {
+    toolbar: boolean;
+    zoomControls: boolean;
+    undoRedo: boolean;
+    helpButton: boolean;
+    mainMenu: boolean;
+  }
   /** @deprecated does nothing. Will be removed in 0.15 */
   welcomeScreen?: boolean;
 }>;

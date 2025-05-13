@@ -255,7 +255,8 @@ const LayerUI = ({
             {shouldRenderSelectedShapeActions && renderSelectedShapeActions()}
           </Stack.Col>
           {!appState.viewModeEnabled &&
-            appState.openDialog?.name !== "elementLinkSelector" && (
+            appState.openDialog?.name !== "elementLinkSelector" &&
+            UIOptions.hiddenElements?.toolbar !== true && ( // atyrode
               <Section heading="shapes" className="shapes-section">
                 {(heading: React.ReactNode) => (
                   <div style={{ position: "relative" }}>
@@ -402,7 +403,13 @@ const LayerUI = ({
       {/* render component fallbacks. Can be rendered anywhere as they'll be
           tunneled away. We only render tunneled components that actually
         have defaults when host do not render anything. */}
-      <DefaultMainMenu UIOptions={UIOptions} />
+      
+      {/* atyrode */}
+      {UIOptions.hiddenElements?.mainMenu !== true && (
+        <DefaultMainMenu UIOptions={UIOptions} />
+      )}
+      {/* atyrode */}
+
       <DefaultSidebar.Trigger
         __fallback
         icon={LibraryIcon}
@@ -548,6 +555,7 @@ const LayerUI = ({
               actionManager={actionManager}
               showExitZenModeBtn={showExitZenModeBtn}
               renderWelcomeScreen={renderWelcomeScreen}
+              UIOptions={UIOptions} // atyrode
             />
             {appState.scrolledOutside && (
               <button
