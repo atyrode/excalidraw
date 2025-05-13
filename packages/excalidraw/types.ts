@@ -444,8 +444,6 @@ export interface AppState {
     userSettings: Record<string, any>;
     uniqueId: string | null;
     displayName: string | null;
-    pads: string[];
-    parentUniqueId: string | null;
   };
   /* atyrode */
 }
