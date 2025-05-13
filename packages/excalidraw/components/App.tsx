@@ -1237,8 +1237,15 @@ class App extends React.Component<AppProps, AppState> {
             this.state.activeEmbeddable?.element === el &&
             this.state.activeEmbeddable?.state === "hover";
           
-          const borderOffsets = this.state.pad?.moduleBorderOffset;
-
+          /* atyrode */
+          const borderOffsets = {
+            left: el.customData?.borderOffsets?.left || 0,
+            right: el.customData?.borderOffsets?.right || 0,
+            top: el.customData?.borderOffsets?.top || 0,
+            bottom: el.customData?.borderOffsets?.bottom || 0,
+          }
+          /* atyrode */
+          
           return (
             <div
               key={el.id}

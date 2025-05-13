@@ -204,12 +204,11 @@ export type StaticCanvasAppState = Readonly<
     gridSize: AppState["gridSize"];
     gridStep: AppState["gridStep"];
     frameRendering: AppState["frameRendering"];
-    linkOpacity: AppState["linkOpacity"]; //atyrode
-    pad: AppState["pad"]; //atyrode
     currentHoveredFontFamily: AppState["currentHoveredFontFamily"];
     hoveredElementIds: AppState["hoveredElementIds"];
     // Cropping
     croppingElementId: AppState["croppingElementId"];
+    pad: AppState["pad"]; //atyrode
   }
 >;
 
@@ -440,21 +439,15 @@ export interface AppState {
     matches: readonly SearchMatch[];
   }> | null;
 
-  linkOpacity: number; //atyrode
-
-  pad: { //atyrode
-    moduleBorderOffset: {
-      left: number;
-      right: number;
-      top: number;
-      bottom: number;
-    };
+  /* atyrode */
+  pad: {
     userSettings: Record<string, any>;
     uniqueId: string | null;
     displayName: string | null;
     pads: string[];
     parentUniqueId: string | null;
   };
+  /* atyrode */
 }
 
 export type SearchMatch = {
