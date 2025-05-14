@@ -319,8 +319,11 @@ export { RadioGroup, RadioGroupChoice, RadioGroupProps } from "./components/Radi
 export { ErrorDialog } from "./components/ErrorDialog";
 export { Island } from "./components/Island";
 
-// Utils
+// Types
+export { Bounds } from "@excalidraw/element/bounds";
 export { AbortError } from "./errors";
+
+// Utils
 export { t } from "./i18n";
 export { withBatchedUpdates } from "./reactUtils";
 export { trackEvent } from "./analytics";
