@@ -672,6 +672,7 @@ export type UIOptions = Partial<{
     undoRedo: boolean;
     helpButton: boolean;
     mainMenu: boolean;
+    sidebar: boolean;
   }
   /** @deprecated does nothing. Will be removed in 0.15 */
   welcomeScreen?: boolean;

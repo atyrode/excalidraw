@@ -408,11 +408,11 @@ const LayerUI = ({
       {UIOptions.hiddenElements?.mainMenu !== true && (
         <DefaultMainMenu UIOptions={UIOptions} />
       )}
-      {/* atyrode */}
 
-      <DefaultSidebar.Trigger
-        __fallback
-        icon={LibraryIcon}
+      {UIOptions.hiddenElements?.sidebar !== true && (
+        <DefaultSidebar.Trigger
+          __fallback
+          icon={LibraryIcon}
         title={capitalizeString(t("toolBar.library"))}
         onToggle={(open) => {
           if (open) {
@@ -424,9 +424,12 @@ const LayerUI = ({
           }
         }}
         tab={DEFAULT_SIDEBAR.defaultTab}
-      >
-        {t("toolBar.library")}
-      </DefaultSidebar.Trigger>
+        >
+          {t("toolBar.library")}
+        </DefaultSidebar.Trigger>
+      )}
+      {/* atyrode */}
+
       <DefaultOverwriteConfirmDialog />
       {appState.openDialog?.name === "ttd" && <TTDDialog __fallback />}
       {/* ------------------------------------------------------------------ */}
